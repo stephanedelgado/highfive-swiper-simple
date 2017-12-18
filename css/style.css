@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+/*@media all and (max-width: 400px) { body { font-size: 20px; }}
+@media all and (max-width: 500px) { body { font-size: 10px; }}*/
+
+p {
+  font-family: "Courier", monospace;
+  font-size: .75em;
+  line-height: 1.5em;
+  letter-spacing: .02em;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 1%;
+  margin-top: 4%;
+}
+
+.swiper-container {
+  height: 100vh;
+  background-color: #4E2381;
+  color: #EAEAEA;
+}
+
+.slide-1 { background-color: #F62A28; }
+.slide-2 { background-color: #4E2381; }
+.slide-3 { background-color: cornflowerblue; }
+
+.slide-1 > .polygon-left { background-image: url("../images/Jason_Evans.jpg"); }
+.slide-2 > .polygon-right { background-image: url("../images/Tim_Hecker1.jpg"); }
+.slide-3 > .polygon-left { background-image: url("../images/Luo_Yang.jpg"); }
+
+/***** POLYGON SHAPE https://bennettfeely.com/clippy *****/
+.polygon {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.polygon-left {
+  -webkit-clip-path: polygon(0 40%, 100% 29%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 40%, 100% 29%, 100% 100%, 0% 100%);
+}
+
+.polygon-right {
+  -webkit-clip-path: polygon(0 29%, 100% 40%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 29%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+.polygon-content {
+  position: absolute;
+  padding: 0 3%;
+}
+
+/***** LOADING SCREEN *****/
+.loading-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+}
+
+.loading-overlay img {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/***** ARROW *****/
+.arrow-up {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  z-index: 100;
+  animation: upArrowAni 2s infinite linear;
+}
+
+@keyframes upArrowAni {
+  0%   { opacity: 0; transform: translate3d(-50%, 30%, 0); }
+  30%  { opacity: 1; transform: translate3d(-50%, -20%, 0); }
+  60%  { opacity: 0; transform: translate3d(-50%, -35%, 0); }
+  100% { opacity: 0; transform: translate3d(-50%, -50%, 0); }
+}
+
+
